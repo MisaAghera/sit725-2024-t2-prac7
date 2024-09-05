@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">CarSpot</div>
+        <a href="https://www.linkedin.com/in/misa-aghera/" target="_blank" class="linkedin-link">LinkedIn</a>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <div class="intro-text">
+            <h1>Welcome to CarSpot</h1>
+            <p>Browse BIG Boy Toyz
+                Database of New Luxury
+                Cars in Australia!</p>
+            <p class="intro-click">Click the side car to add your dream car!!</p>
+        </div>
+        <div class="main-image">
+            <img href="#addCarModal" id="save-car" src="images/car.png" alt="Car Image">
+        </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div>
+        <h4 class="cars-headline">AVAILABLE - CARS</h4>
+        <div class="cards-container" id="cards-container">
+            <!-- Cards will be dynamically generated here -->
+        </div>
+    </div>
+    <!-- Material UI Modal -->
+    <div id="addCarModal" class="modal">
+        <div class="modal-content">
+            <h4>Add Your Dream Car!</h4>
+            <div class="input-field">
+                <input id="car-name" type="text">
+                <label for="car-name">Car Name</label>
+            </div>
+            <div class="input-field">
+                <textarea id="car-description" class="materialize-textarea"></textarea>
+                <label for="car-description">Car Description</label>
+            </div>
+            <div class="input-field">
+                <input id="car-image" type="text">
+                <label for="car-image">Car Image URL</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect btn-flat">Close</a>
+            <a href="#!" class="modal-close waves-effect btn-flat" id="add-car" onclick="addCar()">Add</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+
+</html>
